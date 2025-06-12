@@ -1,4 +1,4 @@
-while True:
+l bawliwhile True:
     name = input("Hi! please enter your character Senpie😎: ")
     print(f'Hi {name}, Welcome to our Anime Paradise Bot Services')
     print("How Can i help you in Anime Paradise")
