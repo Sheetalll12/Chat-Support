@@ -11,7 +11,7 @@ gnfghnhgjghj
         print("Please Select your desired interest to watch")
         print("1.Romantic", "2. Comedy", "3.Thrilling", "4.Horror", "5.Adventures")
         sub_Choice = input("Please Select option (1-5): \n")
-Shhetal
+Shhetal calc
         if sub_Choice == "1":
             print("I gotta list amazing Romantic Anime curated for you only:\n")
             print("*.Your Lie in April \n"
