@@ -194,19 +194,18 @@ while True:
             print("Hey your current Language is 'English'")
             print("\nDo you want to change the Language?")
             io = input("Yes or No")
-            if io == "Yes" or "Y" or "1"or "yes":
+            if io.lower() in ["yes", "y", "1"]:
                 print("which language do you want?\n1.Hindi\n2.Japanese\n3.Korean")
-                lan = input("Please Make your choice 1-3")
-                if lan == "Hindi" or "1" or "hindi":
-                    print("सफलतापूर्वक! भाषा हिंदी में बदल गई है")
-                elif lan == "Japanese" or "2":
-                    print("成功しました！言語がヒンディー語に変更されました")
-                elif lan == "Korean" or "3":
-                    print("성공적으로 언어가 힌디어로 변경되었습니다.")
+                lan = input("Please make your choice (1-3 or name): ").strip().lower()
+
+                if lan in ["1", "hindi"]:
+                    print("सफलतापूर्वक! भाषा हिंदी में बदल गई है\n")
+                elif lan in ["2", "japanese"]:
+                    print("成功しました！言語が日本語に変更されました\n")
+                elif lan in ["3", "korean"]:
+                    print("성공적으로 언어가 한국어로 변경되었습니다.\n")
                 else:
-                    print("Your language still is English")
-            elif io == "No" or "no" or "2":
-                print("No language changed your language is still English")
+                    print("Invalid choice. Your language is still English.\n")
             else:
                 print("Boom!! wrong Choice, Please Try again")
         elif Choice_Menu == "4":
@@ -224,13 +223,15 @@ while True:
                 print("\n👨‍💻 Connecting you to an AnimeBot Support Agent...")
                 print("📞 Support ID: #A94X-77B")
                 print("📨 You can also call our executive @+917503439826 for human help.\n")
-            elif ip == 6:
+            elif ip == "6":
                 print("🔙 Returning to Main Menu...\n")
             else:
                 print("❗ Invalid input. Please enter a number between 1-3.\n")
         elif Choice_Menu == "5":
             feedback=input("We'd love to hear from you, please give your suggestion to improve us")
             print("Thanks for your feedback! We appreciate you 💖Sayonara Saiyan")
-
+            break
+        else:
+            print("Wrong Choice Anime Worrier , please select again!!")
     except ValueError:
         print("Boom!! Wrong Choice Buddy!!😿")
